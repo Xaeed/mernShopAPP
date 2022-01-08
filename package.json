@@ -1,0 +1,30 @@
+{
+  "name": "mernreactapp",
+  "version": "1.0.0",
+  "description": "A sample shopping cart app in react",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/src/server.js",
+    "server": "nodemon backend/src/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seeder": "node backend/routes/seederScript.js"
+  },
+  "keywords": [
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "M Saeed",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.5"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
