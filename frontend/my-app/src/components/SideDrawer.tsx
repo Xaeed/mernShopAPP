@@ -1,12 +1,10 @@
 import "./SideDrawer.css"
-const SideDrawer = ({ show }: { show: any }) => {
-    console.log('show', show)
+const SideDrawer = ({ show, click }: { show: any, click: any }) => {
     const sideBarclass = ["sidedrawer"]
     if (show) {
-        console.log('show is true')
         sideBarclass.push('show')
     }
-    return <div className={sideBarclass.join(" ")}>side drawer is shown asdad </div>
+    return <div className={sideBarclass.join(" ")}><button onClick={click}>side drawer is shown.</button> </div>
 
 }
 

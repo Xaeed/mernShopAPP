@@ -16,8 +16,8 @@ function App() {
     <div className="App">
       <Router>
         <Navbar onClick={() => setSideToggle(true)} />
-        <SideDrawer show={sideToggle} />
-        <Backdrop show={sideToggle} />
+        <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
+        <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
         <main>
           <Route path="/" component={HomeScreen} />
           <Route path="/cart" component={CartScreen} />
