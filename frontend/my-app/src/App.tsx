@@ -1,28 +1,29 @@
 
 import './App.css';
+import 'font-awesome/css/font-awesome.min.css';
 import './components/Navbar'
 import HomeScreen from './screens/HomeScreen'
 import CartScreen from './screens/CartScreen'
 import ProductScreen from './screens/ProductScreen'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from './components/Navbar'
+import Backdrop from './components/Backdrop'
+import SideDrawer from './components/SideDrawer'
+import { useState } from 'react';
 function App() {
+  const [sideToggle, setSideToggle] = useState(false)
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        <Navbar onClick={() => setSideToggle(true)} />
+        <SideDrawer show={sideToggle} />
+        <Backdrop show={sideToggle} />
         <main>
-          {/* <Switch> */}
           <Route path="/" component={HomeScreen} />
           <Route path="/cart" component={CartScreen} />
           <Route path="/product/:id" component={ProductScreen} />
-          {/* </Switch> */}
         </main>
       </Router>
-
-      {/** Navbar  */}
-      {/** SideDrawer   */}
-      {/** NaBackdrop */}
       {/** HomeScreen */}
       {/** ProductScreen */}
       {/** CartScreen */}

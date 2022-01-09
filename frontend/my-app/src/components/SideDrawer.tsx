@@ -1,10 +1,13 @@
-import "./SideDrawer .css"
-const SideDrawer = () => {
-    return (
-        <div className="SideDrawer">
-            <h1> Hello from Backdrop </h1>
-        </div>
-    )
+import "./SideDrawer.css"
+const SideDrawer = ({ show }: { show: any }) => {
+    console.log('show', show)
+    const sideBarclass = ["sidedrawer"]
+    if (show) {
+        console.log('show is true')
+        sideBarclass.push('show')
+    }
+    return <div className={sideBarclass.join(" ")}>side drawer is shown asdad </div>
+
 }
 
 export default SideDrawer

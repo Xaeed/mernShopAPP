@@ -1,8 +1,9 @@
-import "./Backdrop.css"
-const Backdrop = () => {
+import "./Backdrop.css";
+
+const Backdrop = ({ show }: { show: any }) => {
     return (
-        <div className="navbar">
-            <h1> Hello from Backdrop </h1>
+        <div className="Backdrop">
+            Backdrop is here
         </div>
     )
 }
